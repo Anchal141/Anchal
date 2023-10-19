@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Table</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+  .hidden {
+    display: none;
+  }
+  .abc{
+    margin-left: 890px;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+  body{
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8qdMW7uwJPAT9jloVozJDfqo4JbigstJSw&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .navbar{
+    position: fixed;
+    margin-top: -50px;
+    width: 100%;
+    z-index: 12;
+  }
+  #xyz{
+    margin-left: 23px;
+    font-size: 32px;
+  }
+  /* Define the blinking animation */
+@keyframes blink {
+    0% {
+        opacity: 1;
+        color: red;
+    }
+    50% {
+        opacity: 0.5;
+        color: blue;
+    }
+    100% {
+        opacity: 1;
+        color: green;
+    }
+}
+
+/* Apply the animation to the blinking cell */
+.blinking-cell {
+    animation: blink 1s infinite; /* Adjust the duration as needed */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+#mno{
+  align-items: center;
+  justify-content: center;
+}
+td{
+  font-weight: 600;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#"><strong>Vanika</strong></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <p class="abc" style="color: white;">Data Of Employees</p>
+      </div>
+    </div>
+  </nav>
+<div class="container mt-5"><br><br>
+        <p class="blinking-cell " id="xyz">Welcome to the Salary Management System</p>
+    <br>
+  <table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th>Sr.No.</th>
+            <th>Name</th>
+            <th>Employe I'd</th>
+            <th>Position</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-primary">
+            <td>1</td>
+            <td>Vanika</td>
+            <td>73469</td>
+            <td>HR Manager</td>
+            <td><span class="salary hidden">$100,000</span></td>
+        </tr>
+        <tr class="table-secondary">
+            <td>2</td>
+            <td>Himansh</td>
+            <td>03331</td>
+            <td>Manager</td>
+            <td><span class="salary hidden">$93,000</span></td>
+        </tr>
+        <tr class="table-danger">
+            <td>3</td>
+            <td>Vicky</td>
+            <td>39000</td>
+            <td>Data Analyst</td>
+            <td><span class="salary hidden">$88,000</span></td>
+        </tr>
+        <tr class="table-success">
+          <td>4</td>
+            <td>Kiran</td>
+            <td>70159</td>
+            <td>Web-Developer</td>
+            <td><span class="salary hidden">$80,000</span></td>
+        </tr>
+        <tr class="table-warning">
+          <td>5</td>
+            <td>Anchal</td>
+            <td>85600</td>
+            <td>Full Stack Developer</td>
+            <td><span class="salary hidden">$75,000</span></td>
+        </tr>
+        <tr class="table-info">
+          <td>6</td>
+            <td>Abhishek</td>
+            <td>70200</td>
+            <td>Coder</td>
+            <td><span class="salary hidden">$70,000</span></td>
+        </tr>
+        <tr class="table-light">
+          <td>7</td>
+            <td>Sushant</td>
+            <td>94165</td>
+            <td>Front End Developer</td>
+            <td><span class="salary hidden">$60,000</span></td>
+        </tr>
+        <tr class="table-danger">
+          <td>8</td>
+            <td>Tripti</td>
+            <td>35455</td>
+            <td>Data Analyst</td>
+            <td><span class="salary hidden">$51,000</span></td>
+        </tr>
+        <tr class="table-secondary">
+          <td>9</td>
+            <td>Milan</td>
+            <td>70543</td>
+            <td>Software Engineer</td>
+            <td><span class="salary hidden">$50,000</span></td>
+        </tr>
+        <tr class="table-success">
+          <td>10</td>
+            <td>Yashika</td>
+            <td>98234</td>
+            <td>Back End Developer</td>
+            <td><span class="salary hidden">$40,000</span></td>
+        </tr>
+        
+    </tbody>
+</table>
+<br>
+<button class="btn btn-primary text-center" onclick="toggleSalaries()" id="mno">Click to View Salaries</button>
+</div>
+
+<script>
+function toggleSalaries() {
+  var salaryElements = document.querySelectorAll('.salary');
+  salaryElements.forEach(function(element) {
+    element.classList.toggle('hidden');
+  });
+}
+</script>
+
+</body>
+</html>
